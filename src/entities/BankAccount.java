@@ -9,10 +9,14 @@ public class BankAccount extends Account{
 		
 	}
 
-	public BankAccount(Double balance, String holder, Double accountNumber, Double loanLimit) {
-		super(balance, holder, accountNumber);
+	
+
+	public BankAccount(Integer accountNumber, String holder, Double balance, Double loanLimit) {
+		super(accountNumber, holder, balance);
 		this.loanLimit = loanLimit;
 	}
+
+
 
 	public Double getLoanLimit() {
 		return loanLimit;

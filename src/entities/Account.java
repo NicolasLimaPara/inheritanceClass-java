@@ -2,26 +2,30 @@ package entities;
 
 public class Account {
 	
-	protected Double balance;
+	private Integer accountNumber;
 	private String holder;
-	private Double accountNumber;
+	protected Double balance;
+	
+	;
 	
 	public Account() {
 		
 	}
 
-	public Account(Double balance, String holder, Double accountNumber) {
-		this.balance = balance;
-		this.holder = holder;
+	
+	public Account(Integer accountNumber, String holder, Double balance) {
+		super();
 		this.accountNumber = accountNumber;
-	}
-
-	public Double getBalance() {
-		return balance;
-	}
-
-	public void setBalance(Double balance) {
+		this.holder = holder;
 		this.balance = balance;
+	}
+
+	public Integer getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(Integer accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 
 	public String getHolder() {
@@ -32,10 +36,15 @@ public class Account {
 		this.holder = holder;
 	}
 
-	public Double getAccountNumber() {
-		return accountNumber;
+	public Double getBalance() {
+		return balance;
 	}
 
+	public void setBalance(Double balance) {
+		this.balance = balance;
+	}
+
+	
 	public void withdraw(Double amount) {
 		balance -= amount;
 	}
