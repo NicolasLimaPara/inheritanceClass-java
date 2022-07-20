@@ -32,5 +32,11 @@ public class BankAccount extends Account{
 		}
 	}
 	
+	@Override
+	public void withdraw(Double amount) {
+		super.withdraw(amount);
+		balance -= 2.0;
+	}
+	
 
 }
